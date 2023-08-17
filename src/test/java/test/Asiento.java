@@ -12,9 +12,15 @@ public class Asiento {
     }
 
     private boolean colorPermitido(String color) {
-        return switch (color) {
-            case "rojo", "verde", "amarillo", "negro", "blanco" -> true;
-            default -> false;
-        };
+        switch (color) {
+            case "rojo":
+            case "verde":
+            case "amarillo":
+            case "negro":
+            case "blanco":
+                return true;
+            default:
+                return false;
+        }
     }
 }
